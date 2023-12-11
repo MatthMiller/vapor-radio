@@ -4,7 +4,7 @@ Immerse yourself in the dreamy, retro-futuristic ambiance as you navigate throug
 
 ## 🌊 Download here: <a href="">for Windows</a>
 
-<img src="/images/docs/print-vapor-radio.PNG" />
+<img style="margin: 0 auto;" src="/images/docs/print-vapor-radio.PNG" />
 
 #
 
