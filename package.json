@@ -1,0 +1,18 @@
+{
+  "name": "vapor-radio",
+  "version": "1.0.0",
+  "description": "A Vaporwave Radio",
+  "main": "main.js",
+  "icon": "/images/icon.png",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . VaporRadio --icon ./images/icon.png --overwrite --out dist"
+  },
+  "author": "MatthMiller",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-packager": "^17.1.2"
+  },
+  "type": "module"
+}

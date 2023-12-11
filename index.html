@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>VaporRadio</title>
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+  <div class="geral-wrapper">
+    <div class="top-container">
+      <div class="image-container">
+        <img class="song-album-image" id="js-album-image" src="">
+      </div>
+      <div class="main-content-container">
+        <div>
+          <p id="js-song-title" class="song-title"></p>
+          <p id="js-song-album" class="song-album"></p>
+        </div>
+        <div class="main-content-bottom">
+          <button class="main-green-button active" id="js-pause">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 19V5H19V19H13ZM5 19V5H11V19H5ZM15 17H17V7H15V17ZM7 17H9V7H7V17Z" fill="#010101" />
+            </svg>
+
+            <p>
+              Pause
+            </p>
+          </button>
+          <button class="main-green-button" id="js-play">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 19V5L19 12L8 19ZM10 15.35L15.25 12L10 8.65V15.35Z" fill="#010101" />
+            </svg>
+            <p>Play</p>
+          </button>
+
+          <p class="total-time"><span id="js-current-time">00:00</span>/<span id="js-total-time">00:00</span>
+          </p>
+        </div>
+      </div>
+      <div class="volume-wrapper">
+        <input id="js-input-volume" class="input-volume" type="range" min="0" max="1" step="0.01" value="1"></input>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="current" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14 20.725V18.675C15.5 18.2416 16.7083 17.4083 17.625 16.175C18.5417 14.9416 19 13.5416 19 11.975C19 10.4083 18.5417 9.00831 17.625 7.77498C16.7083 6.54164 15.5 5.70831 14 5.27498V3.22498C16.0667 3.69164 17.75 4.73748 19.05 6.36248C20.35 7.98748 21 9.85831 21 11.975C21 14.0916 20.35 15.9625 19.05 17.5875C17.75 19.2125 16.0667 20.2583 14 20.725ZM3 15V8.99998H7L12 3.99998V20L7 15H3ZM14 16V7.94998C14.7833 8.31664 15.3958 8.86664 15.8375 9.59998C16.2792 10.3333 16.5 11.1333 16.5 12C16.5 12.85 16.2792 13.6375 15.8375 14.3625C15.3958 15.0875 14.7833 15.6333 14 16ZM10 8.84998L7.85 11H5V13H7.85L10 15.15V8.84998Z" fill="#BFBFBF" />
+        </svg>
+
+      </div>
+    </div>
+    <div class="bottom-container">
+      <div class="listeners">
+        <img src="./images/icons/visibility_icon.svg">
+        <p>Listeners: <span id="js-listeners">0</span></p>
+      </div>
+      <div class="history-and-info">
+        <button id="js-play-history" class="play-history">
+          <img src="./images/icons/history_icon.svg">
+          <p>
+            Play History
+          </p>
+        </button>
+        <button id="js-info" class="info-icon">
+          <img src="./images/icons/info_icon.svg">
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ao pausar, retirar documento de audio e colocar novamente -->
+  <!-- <audio controls src="https://radio.plaza.one/mp3" type="audio/mp3"></audio> -->
+
+  <script type="module" src="./js/radioController.js"></script>
+  <script type="module" src="./js/statusUpdate.js"></script>
+  <script type="module" src="./js/openPlayHistory.js"></script>
+  <script type="module" src="./js/openInfo.js"></script>
+</body>
+
+</html>

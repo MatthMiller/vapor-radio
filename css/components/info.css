@@ -1,0 +1,29 @@
+.info-background {
+    height: 100%;
+    background-color: #101010;
+    border: 1px solid #080808;
+    padding: 19px 24px;
+}
+
+.info-text {
+    margin-bottom: 24px;
+}
+
+.info-powered {
+    margin-bottom: 8px;
+    color: #C5C5C5;
+}
+
+.info-dev {
+    color: #C5C5C5;
+}
+
+.info-green-bg {
+    background-color: #4FFFB0;
+    color: #010101;
+}
+
+.info-dev span, 
+.info-powered span {
+    color: #FEFFFF;
+}
