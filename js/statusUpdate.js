@@ -48,7 +48,7 @@ const alwaysUpdating = () => {
 
   setInterval(() => {
     updateData();
-  }, 60 * 1000);
+  }, 300 * 1000);
 };
 
 alwaysUpdating();
