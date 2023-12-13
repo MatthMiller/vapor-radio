@@ -28,16 +28,19 @@ const updateData = async () => {
   startNewTimer(song?.position, song['length']);
 };
 
+let uniqueTimingInterval;
 const startNewTimer = (actualPosition, audioLength) => {
-  let counter = actualPosition;
-  const interval = setInterval(() => {
+  let counter = actualPosition >= audioLength - 1 ? 0 : actualPosition;
+
+  if (uniqueTimingInterval) clearInterval(uniqueTimingInterval);
+  uniqueTimingInterval = setInterval(() => {
     counter++;
     currentTimeElement.innerText = `${putZeroAtLeft(
       Math.floor(counter / 60)
     )}:${putZeroAtLeft(Math.floor(counter % 60))}`;
 
     if (counter >= audioLength - 1) {
-      clearInterval(interval);
+      clearInterval(uniqueTimingInterval);
       updateData();
     }
   }, 1000);
