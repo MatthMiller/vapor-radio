@@ -18,7 +18,9 @@ const updateData = async () => {
 
   songs.map((actualSong) => {
     const playedAt = new Date(actualSong.played_at * 1000);
-    const date = `${playedAt.getMonth()}/${playedAt.getDate()}/${playedAt.getFullYear()}`;
+    const date = `${putZeroAtLeft(playedAt.getMonth() + 1)}/${putZeroAtLeft(
+      playedAt.getDate()
+    )}/${playedAt.getFullYear()}`;
     const hours = `${putZeroAtLeft(playedAt.getHours())}:${putZeroAtLeft(
       playedAt.getMinutes()
     )}`;
